@@ -13,7 +13,7 @@
     </div>
     <img src="" id="preview" />
 
-    <button id="changeBtn">画像をpngに変換</button>
+    <button id="changeBtn">画像を圧縮</button>
 
     <style>
       .imgInput {
@@ -63,7 +63,8 @@
           console.time();
           new Compressor(file, {
             // Compressorのオプション
-            maxHeight: 400,
+            quality: 0.8,
+            maxWidthOrHeight: 1000,
             convertSize: Infinity,
             success(result) {
               console.timeEnd();
